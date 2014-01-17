@@ -35,8 +35,10 @@ Public Function Func_FunctionCall()
  
   Select Case lcase(arrAction(0)) 'Selecting the used defined functions
    Case "function1"
+   ' Calling a function with return value
 		Func_FunctionCall = func_Example1(arrActionParam(0))
    Case "function2"
+   ' Calling a function without return value
 		call func_Function2()
 	Case else
 		Reporter.ReportEvent micFail, "User Defined Function mentioned in the row # " & intRowCount & " does not exist", "Please check the keyword."
